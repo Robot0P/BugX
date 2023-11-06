@@ -72,8 +72,8 @@ export default function PlatformLoginForm() {
     <LoginFormPage
       backgroundImageUrl="/backgroundImage.png"
       logo="/logo.png"
-      title="Hol"
-      subTitle="demo"
+      title="FromXS"
+      subTitle="By:From"
       onFinish={handleSubmit}
     >
       <Tabs defaultActiveKey='0' items={tab_items} onChange={(activeKey) => setLoginType(activeKey as LoginType)} />
