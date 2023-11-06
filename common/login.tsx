@@ -72,8 +72,8 @@ export default function PlatformLoginForm() {
     <LoginFormPage
       backgroundImageUrl="/backgroundImage.png"
       logo="/logo.png"
-      title="One XSS"
-      subTitle="用于渗透测试人员使用的XSS平台"
+      title="Hol"
+      subTitle="demo"
       onFinish={handleSubmit}
     >
       <Tabs defaultActiveKey='0' items={tab_items} onChange={(activeKey) => setLoginType(activeKey as LoginType)} />
