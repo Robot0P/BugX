@@ -251,7 +251,7 @@ export default function DashBoard({ data }: { data: DataItem }) {
         }}
         loading={menuLoadding}
         menu={{ request: async () => getMenuData() }}
-        title="One XSS 管理平台"
+        title="FromXS"
         logo="/logo.png"
         avatarProps={{
           // icon: <UserOutlined rev={undefined} />,
