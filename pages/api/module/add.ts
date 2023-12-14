@@ -83,9 +83,11 @@ export default async function handler(req: NextRequest) {
         );
       }
       const sql = `INSERT INTO modules(moduleid,modulename,moduledescription,moduletype,modulecontent,module_extra_enable,module_extra_argname,module_extra_column_name,module_extra_func_name,userid) VALUES((SELECT COALESCE(MAX(moduleid)+1, 1) FROM modules),?,?,?,?,?,?,?,?,?)`;
+      // const result = await process.env.DB.prepare(sql)
+      //   .bind(modulename, moduledescription, moduletype == 1 && usertype == 1 ? 1 : 0, modulecontent, module_extra_enable ? 1 : 0, module_extra_argname ? module_extra_argname : null, module_extra_column_name ? module_extra_column_name : null, module_extra_func_name ? module_extra_func_name : null, userid).run();
+      // // 返回响应
       const result = await process.env.DB.prepare(sql)
-        .bind(modulename, moduledescription, moduletype == 1 && usertype == 1 ? 1 : 0, modulecontent, module_extra_enable ? 1 : 0, module_extra_argname ? module_extra_argname : null, module_extra_column_name ? module_extra_column_name : null, module_extra_func_name ? module_extra_func_name : null, userid).run();
-      // 返回响应
+        .bind(modulename, moduledescription, moduletype == 1 ? 1 : 0, modulecontent, module_extra_enable ? 1 : 0, module_extra_argname ? module_extra_argname : null, module_extra_column_name ? module_extra_column_name : null, module_extra_func_name ? module_extra_func_name : null, userid).run();
       return new Response(
         JSON.stringify({
           result: result
