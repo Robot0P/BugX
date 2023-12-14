@@ -45,7 +45,7 @@ export default async function handler(req: NextRequest) {
         .bind(userid, userid, pageSize, offset)
         .all()
         .then((query_result: any) => {
-          return query_result.results.map((row: any) => ({
+          return query_result.map((row: any) => ({
             moduleid: row.moduleid,
             modulename: row.modulename,
             moduledescription: row.moduledescription,
@@ -59,8 +59,8 @@ export default async function handler(req: NextRequest) {
         });
 
       const count_result = await process.env.DB.prepare(
-        "SELECT count(*)as total FROM modules WHERE userid=? OR moduletype=0"
-      ).bind(userid).first().then((query_result: any) => {
+        "SELECT count(*) as total FROM modules WHERE userid=? OR moduletype=0"
+      ).bind(userid).get().then((query_result: any) => {
         return {
           total: query_result.total
         }
