@@ -40,7 +40,7 @@ export default async function handler(req: NextRequest) {
       // 实现分页查询
       const result = await process.env.DB
         .prepare(
-          "SELECT moduleid,modulename,moduledescription,moduletype,module_extra_enable,module_extra_argname,module_extra_column_name,module_extra_func_name,(userid = ?) AS is_self FROM modules WHERE userid=? OR moduletype=1 LIMIT 10000 OFFSET 0"
+          "SELECT moduleid,modulename,moduledescription,moduletype,module_extra_enable,module_extra_argname,module_extra_column_name,module_extra_func_name,(userid = ?) AS is_self FROM modules WHERE userid=? OR moduletype=1 LIMIT ? OFFSET ?"
         )
         .bind(userid, userid, pageSize, offset)
         .all()
