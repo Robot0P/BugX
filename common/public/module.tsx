@@ -268,7 +268,7 @@ export default function ModulePage({ sessionData }: { sessionData: SessionDataIt
                                     label="公开"
                                     name="moduletype"
                                     initialValue={false}
-                                    disabled={sessionData.usertype != 1}
+                                    disabled={false}
                                 />
                                 <ProFormSwitch
                                     label="开启额外参数"
