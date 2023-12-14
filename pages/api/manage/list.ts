@@ -52,7 +52,7 @@ export default async function handler(req: NextRequest) {
             // 实现分页查询
             const result = await process.env.DB
                 .prepare(
-                    "SELECT users.userid, users.username, users.useremail, users.usertype, users.enabled, COUNT(projects.projectid) AS projectcount FROM users LEFT JOIN projects ON users.userid = projects.userid  GROUP BY users.userid, users.username, users.useremail, users.usertype, users.enabled OFFSET ?"
+                    "SELECT users.userid, users.username, users.useremail, users.usertype, users.enabled, COUNT(projects.projectid) AS projectcount FROM users LEFT JOIN projects ON users.userid = projects.userid  GROUP BY users.userid, users.username, users.useremail, users.usertype, users.enabled LIMIT 10000 OFFSET ?"
                 )
                 .bind(pageSize, offset)
                 .all()
