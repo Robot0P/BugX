@@ -353,7 +353,7 @@ export default function ModulePage({ sessionData }: { sessionData: SessionDataIt
                     }
                   }}
                 pagination={{
-                    pageSize: 5,
+                    pageSize: 50,
                 }}
                 showActions="hover"
                 metas={{
