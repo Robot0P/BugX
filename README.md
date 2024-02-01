@@ -35,42 +35,13 @@
 
 ## 三、安装部署
 
-- [查看部署说明Wiki](https://github.com/onxss/OneXSS/wiki/%E9%83%A8%E7%BD%B2%E8%AF%B4%E6%98%8E)
+- [查看部署说明Wiki](https://github.com/Robot0P/BugX/wiki/%E9%83%A8%E7%BD%B2%E8%AF%B4%E6%98%8E)
 
 ---
-
-## 四、使用指南
-
-- [查看使用指南Wiki](https://github.com/onxss/OneXSS/wiki/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)
-
----
-
-## 五、运行截图
-
-- Dashboard
-
-  ![image-20231011122513539](./assets/image-20231011122513539.png)
-
-- 项目管理![image-20231011122521265](./assets/image-20231011122521265.png)
-
-- 模块仓库
-
-  ![image-20231011122538923](./assets/image-20231011122538923.png)
-
-- 用户管理
-
-  ![image-20231011122612684](./assets/image-20231011122612684.png)
-
-- 项目日志
-
-  ![image-20231011122636392](./assets/image-20231011122636392.png)
-
----
-
 ## 六、Cloudflare 平台限制
 
-- `One XSS` 项目，将用户信息、模块信息、项目信息、日志信息等保存在D1数据库中。
-- `One XSS` 项目，将登陆Token、项目代码等缓存在KV中。
+- `BugX` 项目，将用户信息、模块信息、项目信息、日志信息等保存在D1数据库中。
+- `BugX` 项目，将登陆Token、项目代码等缓存在KV中。
 - 因此将受到Cloudflare的部分限制。
 
 ### 1. D1数据库限制
@@ -98,7 +69,7 @@
 ### 2. KV限制
 
 - [KV键值限制详情](https://developers.cloudflare.com/kv/platform/limits/)
-- KV仅在One XSS中用于缓存，因此写操作1000次可满足个人渗透测试使用。
+- KV仅在BugX中用于缓存，因此写操作1000次可满足个人渗透测试使用。
 - 一般情况下，每天10万次读可满足个人渗透测试使用。
 
 | 类别            | 免费用户            | 付费用户   |
@@ -123,7 +94,7 @@
 
 - 目前项目编译压缩后大小约为600~700KB，经测试不高于950KB均可部署成功。
 
-- **受制于500MB的D1数据库大小，因此预计One XSS项目在使用中受到Workers限制的影响的概率较小**
+- **受制于500MB的D1数据库大小，因此预计BugX项目在使用中受到Workers限制的影响的概率较小**
 
 - 帐户计划限制
 
