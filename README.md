@@ -1,9 +1,9 @@
-![logo-no-background](./assets/logo-no-background.png)
 
-# One XSS 
 
-- One XSS 是一款基于Cloudflare Pages/D1/KV实现的在线XSS平台,可自定义模块和项目,用于帮助渗透测试工程师进行XSS漏洞验证.
-- One XSS 项目前端/后端/数据库均使用Cloudflare相关产品,采用无服务部署
+# BugX
+
+- BugX 是一款基于Cloudflare Pages/D1/KV实现的在线BugX平台,可自定义模块和项目,用于帮助渗透测试工程师进行验证.
+- BugX 项目前端/后端/数据库均使用Cloudflare相关产品,采用无服务部署
 
 > 免责声明：此项目仅限于安全研究，用户承担因使用此工具而导致的所有法律和相关责任！作者不承担任何法律责任！
 >
