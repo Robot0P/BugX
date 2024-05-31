@@ -258,7 +258,7 @@ export default function AccesslogPage({ pathname }: { pathname: string }) {
                     }
                   }}
                 pagination={{
-                    pageSize: 50,
+                    pageSize: 20,
                 }}
                 rowSelection={{
                     // 自定义选择项参考: https://ant.design/components/table-cn/#components-table-demo-row-selection-custom
